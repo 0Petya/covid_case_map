@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COVID-19 Cases Over Time</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/chroma-js@2.1.2/chroma.js" crossorigin=""></script>
+  
+  <script src="./data/map_data.js"></script>
+  
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    html, body, #map {
+      height: 100%;
+      width: 100%;
+    }
+    
+    #sliderContainer {
+      position: absolute;
+      bottom: 2%;
+      left: 2%;
+      z-index: 401;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;  
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%; 
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="sliderContainer">
+    <p id="sliderText"></p>
+  </div>
+  
+  <script src="./map.js"></script>
+</body>
+
+</html>
